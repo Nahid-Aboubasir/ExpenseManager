@@ -13,9 +13,9 @@ namespace Infrastructure.Persistence
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
         
-        public DbSet<Category> Categories { get; set; }
+        public DbSet<Category> Categories => Set<Category>();
 
-        public DbSet<Expense> Expenses { get; set; }
+        public DbSet<Expense> Expenses => Set<Expense>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
